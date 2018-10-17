@@ -1,0 +1,47 @@
+{
+    "name": "doomsdaylang",
+    "displayName": "Doomsday Engine",
+    "description": "Syntax highlighting for Doomsday Engine languages: Info, Doomsday Script, and Amethyst.",
+    "version": "1.0.0",
+    "license": "LICENSE.md",
+    "engines": {
+        "vscode": ">=0.9.0"
+    },
+    "icon": "./deng-logo-128.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skyjake/doomsdaylang.git"
+    },
+    "publisher": "skyjake",
+    "contributes": {
+        "languages": [{
+            "id": "amethyst",
+            "aliases": ["Amethyst"],
+            "extensions": [".ame"]
+        }, {
+            "id": "doomsday",
+            "aliases": ["Doomsday Script", "DEScript"],
+            "extensions": [".de", ".ds"]
+        }, {
+            "id": "doomsdayinfo",
+            "aliases": ["Doomsday Info", "DEInfo"],
+            "extensions": [".dei", ".info"]
+        }],
+        "grammars": [{
+                "language": "amethyst",
+                "scopeName": "source.amethyst",
+                "path": "./syntaxes/Amethyst.tmLanguage"
+            },
+            {
+                "language": "doomsday",
+                "scopeName": "source.doomsday",
+                "path": "./syntaxes/Doomsday Script.tmLanguage"
+            },
+            {
+                "language": "doomsdayinfo",
+                "scopeName": "source.doomsdayinfo",
+                "path": "./syntaxes/Doomsday Info.tmLanguage"
+            }
+        ]
+    }
+}

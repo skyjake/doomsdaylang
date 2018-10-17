@@ -1,6 +1,6 @@
-MIT License
+# MIT License
 
-Copyright (c) 2018 Jaakko Keränen
+**Copyright (c) 2018 Jaakko Keränen <jaakko.keranen@iki.fi>**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
