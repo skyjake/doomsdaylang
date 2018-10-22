@@ -2,7 +2,7 @@
     "name": "doomsdaylang",
     "displayName": "Doomsday Engine",
     "description": "Syntax highlighting for Doomsday Engine languages: DED definitions, Info, Doomsday Script, and Amethyst.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "license": "LICENSE.md",
     "engines": {
         "vscode": ">=0.9.0"

@@ -30,47 +30,6 @@ Improvements todo:
 			<string>comment.block.doomsdaydefns</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(?i)(Copy|\*|)\s*(Header|Flag|Episode|Hub|Map|Map\sInfo|Exit|Mobj|Thing|State|Sprite|Light|Material|Layer|Stage|Model|Md2|Sub|Sound|Music|Sky|Layer\s1|Layer\s2|Info|Sky\sModel|Text|Texture\sEnvironment|Composite\sBitmapFont|Values|Detail|Reflection|Generator|Finale|InFine|Decoration|Group|Line|Sector|)\s*({|$)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.doomsdaydefns</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.class.doomsdaydefns</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.section.scope.doomsdaydefns</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>}</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.doomsdaydefns</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>meta.definition.doomsdaydefns</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>source.doomsdaydefns</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
 			<key>include</key>
 			<string>#quoted_string</string>
 		</dict>
@@ -120,16 +79,77 @@ Improvements todo:
 			<key>name</key>
 			<string>entity.name.variable.doomsdaydefns</string>
 		</dict>
+		<!-- <dict>
+			<key>begin</key>
+			<string>(?i)(Copy|\*|)\s*(Header|Flag|Episode|Hub|Map|Map\sInfo|Exit|Mobj|Thing|State|Sprite|Light|Material|Layer|Stage|Model|Md2|Sub|Sound|Music|Sky|Layer\s1|Layer\s2|Info|Sky\sModel|Text|Texture\sEnvironment|Composite\sBitmapFont|Values|Detail|Reflection|Generator|Finale|InFine|Decoration|Group|Line|Sector|)\s*({|$)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.doomsdaydefns</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.doomsdaydefns</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.doomsdaydefns</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.doomsdaydefns</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.definition.doomsdaydefns</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.doomsdaydefns</string>
+				</dict> -
+			</array> 
+		</dict> -->
 	</array>
 	<key>repository</key>
 	<dict>
 		<key>block</key>
 		<dict>
 			<key>begin</key>
-			<string>{</string>
+			<string>(?i)(Copy|\*|)\s*(Header|Flag|Episode|Hub|Map|Map\sInfo|Exit|Mobj|Thing|State|Sprite|Light|Material|Layer|Stage|Model|Md2|Sub|Sound|Music|Sky|Layer\s1|Layer\s2|Info|Sky\sModel|Text|Texture\sEnvironment|Texture|Composite\sBitmapFont|Values|Detail|Reflection|Generator|Finale|InFine|Decoration|Group|Line|Sector)(\s+(Mods)\s+("[^""]*")|)\s*({|$)</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>0</key>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.doomsdaydefns</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.doomsdaydefns</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.doomsdaydefns</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.doomsdaydefns</string>
+				</dict>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.section.scope.doomsdaydefns</string>
@@ -337,7 +357,7 @@ Improvements todo:
 		<key>keywords</key>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(Header|Include|IncludeIf|SkipIf|Copy|Mods|Not)\b</string>
+			<string>(?i)\b(Header|Include|IncludeIf|SkipIf|Copy|Not)\b</string>
 			<key>name</key>
 			<string>keyword.control.doomsdaydefns</string>
 		</dict>
@@ -351,14 +371,14 @@ Improvements todo:
 		<key>hex_number</key>
 		<dict>
 			<key>match</key>
-			<string>\b[-+]?[A-Fa-fXx0-9]+\b</string>
+			<string>\b[-+]?0[xX][0-9A-Fa-f]+\b</string>
 			<key>name</key>
-			<string>constant.numeric.doomsdaydefns</string>
+			<string>constant.numeric.hexadecimal.doomsdaydefns</string>
 		</dict>
 		<key>number</key>
 		<dict>
 			<key>match</key>
-			<string>\b[-+]?\.?[0-9]+</string>
+			<string>\b[-+]?[0-9]*\.?[0-9]+</string>
 			<key>name</key>
 			<string>constant.numeric.doomsdaydefns</string>
 		</dict>
