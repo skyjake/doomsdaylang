@@ -1,8 +1,8 @@
 {
     "name": "doomsdaylang",
     "displayName": "Doomsday Engine",
-    "description": "Syntax highlighting for Doomsday Engine languages: Info, Doomsday Script, and Amethyst.",
-    "version": "1.0.0",
+    "description": "Syntax highlighting for Doomsday Engine languages: DED definitions, Info, Doomsday Script, and Amethyst.",
+    "version": "1.1.0",
     "license": "LICENSE.md",
     "engines": {
         "vscode": ">=0.9.0"
@@ -15,22 +15,55 @@
     "publisher": "skyjake",
     "contributes": {
         "languages": [{
-            "id": "amethyst",
-            "aliases": ["Amethyst"],
-            "extensions": [".ame"]
-        }, {
-            "id": "doomsday",
-            "aliases": ["Doomsday Script", "DEScript"],
-            "extensions": [".de", ".ds"]
-        }, {
-            "id": "doomsdayinfo",
-            "aliases": ["Doomsday Info", "DEInfo"],
-            "extensions": [".dei", ".info"]
-        }],
+                "id": "amethyst",
+                "aliases": [
+                    "Amethyst"
+                ],
+                "extensions": [
+                    ".ame"
+                ]
+            },
+            {
+                "id": "doomsdaydefns",
+                "aliases": [
+                    "Doomsday Engine Definitions"
+                ],
+                "extensions": [
+                    ".ded"
+                ]
+            },
+            {
+                "id": "doomsday",
+                "aliases": [
+                    "Doomsday Script",
+                    "DEScript"
+                ],
+                "extensions": [
+                    ".de",
+                    ".ds"
+                ]
+            },
+            {
+                "id": "doomsdayinfo",
+                "aliases": [
+                    "Doomsday Info",
+                    "DEInfo"
+                ],
+                "extensions": [
+                    ".dei",
+                    ".info"
+                ]
+            }
+        ],
         "grammars": [{
                 "language": "amethyst",
                 "scopeName": "source.amethyst",
                 "path": "./syntaxes/Amethyst.tmLanguage"
+            },
+            {
+                "language": "doomsdaydefns",
+                "scopeName": "source.doomsdaydefns",
+                "path": "./syntaxes/DED.tmLanguage"
             },
             {
                 "language": "doomsday",
@@ -43,5 +76,10 @@
                 "path": "./syntaxes/Doomsday Info.tmLanguage"
             }
         ]
+    },
+    "__metadata": {
+        "id": "a803f182-c163-4be1-ad0d-f957ce43772a",
+        "publisherDisplayName": "skyjake",
+        "publisherId": "2da01321-2f56-410f-82a7-cae5743b0214"
     }
 }
