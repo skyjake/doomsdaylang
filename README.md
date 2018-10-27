@@ -4,6 +4,12 @@
 
 ## Change log
 
+### 1.1.2
+
+- Recognize "inherits" when it is used as an Info attribute after the block name.
+- Changed classification of Info block types and names.
+- Improved accuracy of Info highlighting.
+
 ### 1.1.1
 
 - Fixed an issue with recognizing DED block structures.

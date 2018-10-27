@@ -14,15 +14,11 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string>#block</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#list</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?x) (script) \s+ ([-@".\w]+) \s+ ([-@".\w]+) \s* ({)</string>
+			<string>(?x) (script) \s+ ([-@".A-Za-z]+) \s+ ([-@".A-Za-z0-9]+) \s* ({)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -103,6 +99,10 @@
 			</array>
 		</dict>
 		<dict>
+			<key>include</key>
+			<string>#block</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>(vertex|fragment)\s*(=)\s*"</string>
 			<key>beginCaptures</key>
@@ -177,6 +177,10 @@
 		<dict>
 			<key>include</key>
 			<string>#typed_group</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#typed_group_inherit</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -394,7 +398,7 @@
 			<key>match</key>
 			<string>([-@A-Za-z0-9_.]+)\s+(?={)</string>
 			<key>name</key>
-			<string>variable.language.doomsdayinfo</string>
+			<string>entity.name.type.class.doomsdayinfo</string>
 		</dict>
 		<key>keywords</key>
 		<dict>
@@ -493,20 +497,51 @@
 				</dict>
 			</array>
 		</dict>
-		<key>typed_group</key>
+		<key>typed_group_inherit</key>
 		<dict>
+			<key>match</key>
+			<string>(?x) ([-@A-Za-z0-9_.]+) \s+ ([-"@A-Za-z0-9_.]+) \s+ (inherits) \s+ ([-"@A-Za-z0-9_.]+) \s* (?={)</string>
 			<key>captures</key>
 			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.doomsdayinfo</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>variable.language.doomsdayinfo</string>
+					<string>entity.name.type.class.doomsdayinfo</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.doomsdayinfo</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class.doomsdayinfo</string>
 				</dict>
 			</dict>
+		</dict>
+		<key>typed_group</key>
+		<dict>
 			<key>match</key>
-			<string>(?x) ^\s* ([-@A-Za-z0-9_.]+) \s+ ([-"@A-Za-z0-9_.]+)</string>
-			<key>name</key>
-			<string>entity.name.type.class.doomsdayinfo</string>
+			<string>(?x) ([-@A-Za-z0-9_.]+) \s+ ([-"@A-Za-z0-9_.]+) \s* (?={)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.doomsdayinfo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class.doomsdayinfo</string>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>scopeName</key>
