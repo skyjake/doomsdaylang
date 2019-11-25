@@ -1,8 +1,12 @@
 # Doomsday Engine Syntax Highlighting
 
-[Doomsday Engine](http://dengine.net/) uses a few different definition languages for resources and other data. This package provides syntax highlighting for DED definitions, Info (Snowberry add-on metadata), Doomsday Script, and Amethyst documentation sources.
+[Doomsday Engine](http://dengine.net/) uses a few different definition languages for resources and other data. This package provides syntax highlighting for DED definitions, Info (Snowberry add-on metadata), [Doomsday Script](https://manual.dengine.net/script/reference), and Amethyst documentation sources.
 
 ## Change log
+
+### 1.1.3
+
+- Removed the obsolete "export" keyword from the Doomsday Script syntax.
 
 ### 1.1.2
 

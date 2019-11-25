@@ -382,7 +382,7 @@
 		<key>statements</key>
 		<dict>
 			<key>match</key>
-			<string>\b(import|export|del|print|record)\b</string>
+			<string>\b(import|del|print|record)\b</string>
 			<key>name</key>
 			<string>keyword.other.doomsday</string>
 		</dict>
